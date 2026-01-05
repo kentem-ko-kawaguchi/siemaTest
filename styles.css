@@ -1,0 +1,56 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    overflow: hidden;
+}
+
+/* トグルボタンのスタイル */
+.toggle-button {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    z-index: 1000;
+    padding: 10px 20px;
+}
+
+#container {
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+}
+
+.content {
+    display: flex;
+    background-color: #ccc;
+    justify-content: center;
+}
+
+/* Split.js スプリッター設定 */
+.gutter {
+    background-color: #888;
+}
+
+    .gutter:hover {
+        background-color: #666;
+    }
+
+/* Siema スライダー設定 */
+.siema {
+    max-width: 800px;
+}
+
+    .siema img {
+        max-height: 800px;
+    }
+
+/* 黒板切り替え矢印設定 */
+.arrow {
+    width: 30px;
+    margin: 0 10px;
+    background-color: #FFF;
+}
