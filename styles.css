@@ -35,18 +35,26 @@ html, body {
     background-color: #888;
 }
 
-    .gutter:hover {
-        background-color: #666;
-    }
+.gutter:hover {
+    background-color: #666;
+}
 
 /* Siema スライダー設定 */
 .siema {
-    max-width: 800px;
+    padding: unset;
+    
+    & > div > div {
+        height: 300px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
 }
 
-    .siema img {
-        max-height: 800px;
-    }
+.siema img {
+    max-width: 320px;
+    max-height: 300px;
+}
 
 /* 黒板切り替え矢印設定 */
 .arrow {

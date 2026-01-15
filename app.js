@@ -2,19 +2,6 @@
 const STORAGE_KEY = 'split-sizes';
 const VISIBILITY_KEY = 'right-panel-visible';
 
-// ローカルストレージから保存されたサイズを取得
-function getSavedSizes() {
-    const saved = localStorage.getItem(STORAGE_KEY);
-    if (saved) {
-        try {
-            return JSON.parse(saved);
-        } catch (e) {
-            console.error('ローカルストレージの読み込みエラー:', e);
-        }
-    }
-    return [50, 50]; // デフォルト値
-}
-
 // ローカルストレージにサイズを保存
 function saveSizes(sizes) {
     try {
@@ -26,7 +13,8 @@ function saveSizes(sizes) {
 
 // Split.jsインスタンス生成
 const split = Split(['#left', '#right'], {
-    sizes: getSavedSizes(), // 保存された位置を復元
+    sizes: [70,30], // 保存された位置を復元
+    minSize: [400, 200],
     gutterSize: 10,
     onDrag: function() {
         // スプリッター移動時にSiemaを更新
